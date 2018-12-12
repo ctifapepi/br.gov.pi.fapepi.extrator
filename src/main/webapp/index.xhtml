@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:composite="http://java.sun.com/jsf/composite"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<title>Extrator FAPEPI</title>
+	<meta http-equiv="Content-Type" content='text/html; charset=UTF-8' />
+</h:head>
+<h:body>
+	<h:form>
+	<f:view>
+		<p:panel>
+			<p:outputLabel value="Olá mundo do JSF" />
+		</p:panel>
+		<p:panel>
+			<p:panelGrid columns="2">
+				<p:commandButton value="Pega Curriculo" id="ajax" action="#{pegaCurriculoUtil.pegaCV()}" 
+				style="margin-right:20px;" styleClass="ui-priority-primary" />
+			</p:panelGrid>		
+		</p:panel>
+		
+	</f:view>
+	</h:form>
+</h:body>
+</html>

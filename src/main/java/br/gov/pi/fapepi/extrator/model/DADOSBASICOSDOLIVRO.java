@@ -1,0 +1,446 @@
+//
+// Este arquivo foi gerado pela Arquitetura JavaTM para Implementação de Referência (JAXB) de Bind XML, v2.2.8-b130911.1802 
+// Consulte <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
+// Todas as modificações neste arquivo serão perdidas após a recompilação do esquema de origem. 
+// Gerado em: 2018.11.30 às 02:01:16 PM GMT-03:00 
+//
+
+
+package br.gov.pi.fapepi.extrator.model;
+
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlSchemaType;
+import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+
+
+/**
+ * <p>Classe Java de anonymous complex type.
+ * 
+ * <p>O seguinte fragmento do esquema especifica o conteúdo esperado contido dentro desta classe.
+ * 
+ * <pre>
+ * &lt;complexType>
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;attribute name="TIPO">
+ *         &lt;simpleType>
+ *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token">
+ *             &lt;enumeration value="LIVRO_PUBLICADO"/>
+ *             &lt;enumeration value="LIVRO_ORGANIZADO_OU_EDICAO"/>
+ *             &lt;enumeration value="NAO_INFORMADO"/>
+ *           &lt;/restriction>
+ *         &lt;/simpleType>
+ *       &lt;/attribute>
+ *       &lt;attribute name="NATUREZA" default="NAO_INFORMADO">
+ *         &lt;simpleType>
+ *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token">
+ *             &lt;enumeration value="COLETANEA"/>
+ *             &lt;enumeration value="TEXTO_INTEGRAL"/>
+ *             &lt;enumeration value="VERBETE"/>
+ *             &lt;enumeration value="ANAIS"/>
+ *             &lt;enumeration value="CATALOGO"/>
+ *             &lt;enumeration value="ENCICLOPEDIA"/>
+ *             &lt;enumeration value="LIVRO"/>
+ *             &lt;enumeration value="OUTRA"/>
+ *             &lt;enumeration value="PERIODICO"/>
+ *             &lt;enumeration value="NAO_INFORMADO"/>
+ *           &lt;/restriction>
+ *         &lt;/simpleType>
+ *       &lt;/attribute>
+ *       &lt;attribute name="TITULO-DO-LIVRO" type="{http://www.w3.org/2001/XMLSchema}anySimpleType" />
+ *       &lt;attribute name="ANO" type="{http://www.w3.org/2001/XMLSchema}anySimpleType" />
+ *       &lt;attribute name="PAIS-DE-PUBLICACAO" type="{http://www.w3.org/2001/XMLSchema}anySimpleType" />
+ *       &lt;attribute name="IDIOMA" type="{http://www.w3.org/2001/XMLSchema}anySimpleType" />
+ *       &lt;attribute name="MEIO-DE-DIVULGACAO" default="NAO_INFORMADO">
+ *         &lt;simpleType>
+ *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token">
+ *             &lt;enumeration value="IMPRESSO"/>
+ *             &lt;enumeration value="WEB"/>
+ *             &lt;enumeration value="MEIO_MAGNETICO"/>
+ *             &lt;enumeration value="MEIO_DIGITAL"/>
+ *             &lt;enumeration value="FILME"/>
+ *             &lt;enumeration value="HIPERTEXTO"/>
+ *             &lt;enumeration value="OUTRO"/>
+ *             &lt;enumeration value="VARIOS"/>
+ *             &lt;enumeration value="NAO_INFORMADO"/>
+ *           &lt;/restriction>
+ *         &lt;/simpleType>
+ *       &lt;/attribute>
+ *       &lt;attribute name="HOME-PAGE-DO-TRABALHO" type="{http://www.w3.org/2001/XMLSchema}anySimpleType" />
+ *       &lt;attribute name="FLAG-RELEVANCIA" default="NAO">
+ *         &lt;simpleType>
+ *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token">
+ *             &lt;enumeration value="SIM"/>
+ *             &lt;enumeration value="NAO"/>
+ *           &lt;/restriction>
+ *         &lt;/simpleType>
+ *       &lt;/attribute>
+ *       &lt;attribute name="DOI" type="{http://www.w3.org/2001/XMLSchema}anySimpleType" />
+ *       &lt;attribute name="TITULO-DO-LIVRO-INGLES" type="{http://www.w3.org/2001/XMLSchema}anySimpleType" />
+ *       &lt;attribute name="FLAG-DIVULGACAO-CIENTIFICA" default="NAO">
+ *         &lt;simpleType>
+ *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}token">
+ *             &lt;enumeration value="SIM"/>
+ *             &lt;enumeration value="NAO"/>
+ *           &lt;/restriction>
+ *         &lt;/simpleType>
+ *       &lt;/attribute>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
+ * </pre>
+ * 
+ * 
+ */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "")
+@XmlRootElement(name = "DADOS-BASICOS-DO-LIVRO")
+public class DADOSBASICOSDOLIVRO {
+
+    @XmlAttribute(name = "TIPO")
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    protected String tipo;
+    @XmlAttribute(name = "NATUREZA")
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    protected String natureza;
+    @XmlAttribute(name = "TITULO-DO-LIVRO")
+    @XmlSchemaType(name = "anySimpleType")
+    protected String titulodolivro;
+    @XmlAttribute(name = "ANO")
+    @XmlSchemaType(name = "anySimpleType")
+    protected String ano;
+    @XmlAttribute(name = "PAIS-DE-PUBLICACAO")
+    @XmlSchemaType(name = "anySimpleType")
+    protected String paisdepublicacao;
+    @XmlAttribute(name = "IDIOMA")
+    @XmlSchemaType(name = "anySimpleType")
+    protected String idioma;
+    @XmlAttribute(name = "MEIO-DE-DIVULGACAO")
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    protected String meiodedivulgacao;
+    @XmlAttribute(name = "HOME-PAGE-DO-TRABALHO")
+    @XmlSchemaType(name = "anySimpleType")
+    protected String homepagedotrabalho;
+    @XmlAttribute(name = "FLAG-RELEVANCIA")
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    protected String flagrelevancia;
+    @XmlAttribute(name = "DOI")
+    @XmlSchemaType(name = "anySimpleType")
+    protected String doi;
+    @XmlAttribute(name = "TITULO-DO-LIVRO-INGLES")
+    @XmlSchemaType(name = "anySimpleType")
+    protected String titulodolivroingles;
+    @XmlAttribute(name = "FLAG-DIVULGACAO-CIENTIFICA")
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    protected String flagdivulgacaocientifica;
+
+    /**
+     * Obtém o valor da propriedade tipo.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getTIPO() {
+        return tipo;
+    }
+
+    /**
+     * Define o valor da propriedade tipo.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setTIPO(String value) {
+        this.tipo = value;
+    }
+
+    /**
+     * Obtém o valor da propriedade natureza.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getNATUREZA() {
+        if (natureza == null) {
+            return "NAO_INFORMADO";
+        } else {
+            return natureza;
+        }
+    }
+
+    /**
+     * Define o valor da propriedade natureza.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setNATUREZA(String value) {
+        this.natureza = value;
+    }
+
+    /**
+     * Obtém o valor da propriedade titulodolivro.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getTITULODOLIVRO() {
+        return titulodolivro;
+    }
+
+    /**
+     * Define o valor da propriedade titulodolivro.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setTITULODOLIVRO(String value) {
+        this.titulodolivro = value;
+    }
+
+    /**
+     * Obtém o valor da propriedade ano.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getANO() {
+        return ano;
+    }
+
+    /**
+     * Define o valor da propriedade ano.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setANO(String value) {
+        this.ano = value;
+    }
+
+    /**
+     * Obtém o valor da propriedade paisdepublicacao.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getPAISDEPUBLICACAO() {
+        return paisdepublicacao;
+    }
+
+    /**
+     * Define o valor da propriedade paisdepublicacao.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setPAISDEPUBLICACAO(String value) {
+        this.paisdepublicacao = value;
+    }
+
+    /**
+     * Obtém o valor da propriedade idioma.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getIDIOMA() {
+        return idioma;
+    }
+
+    /**
+     * Define o valor da propriedade idioma.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setIDIOMA(String value) {
+        this.idioma = value;
+    }
+
+    /**
+     * Obtém o valor da propriedade meiodedivulgacao.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getMEIODEDIVULGACAO() {
+        if (meiodedivulgacao == null) {
+            return "NAO_INFORMADO";
+        } else {
+            return meiodedivulgacao;
+        }
+    }
+
+    /**
+     * Define o valor da propriedade meiodedivulgacao.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setMEIODEDIVULGACAO(String value) {
+        this.meiodedivulgacao = value;
+    }
+
+    /**
+     * Obtém o valor da propriedade homepagedotrabalho.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getHOMEPAGEDOTRABALHO() {
+        return homepagedotrabalho;
+    }
+
+    /**
+     * Define o valor da propriedade homepagedotrabalho.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setHOMEPAGEDOTRABALHO(String value) {
+        this.homepagedotrabalho = value;
+    }
+
+    /**
+     * Obtém o valor da propriedade flagrelevancia.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getFLAGRELEVANCIA() {
+        if (flagrelevancia == null) {
+            return "NAO";
+        } else {
+            return flagrelevancia;
+        }
+    }
+
+    /**
+     * Define o valor da propriedade flagrelevancia.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setFLAGRELEVANCIA(String value) {
+        this.flagrelevancia = value;
+    }
+
+    /**
+     * Obtém o valor da propriedade doi.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getDOI() {
+        return doi;
+    }
+
+    /**
+     * Define o valor da propriedade doi.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setDOI(String value) {
+        this.doi = value;
+    }
+
+    /**
+     * Obtém o valor da propriedade titulodolivroingles.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getTITULODOLIVROINGLES() {
+        return titulodolivroingles;
+    }
+
+    /**
+     * Define o valor da propriedade titulodolivroingles.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setTITULODOLIVROINGLES(String value) {
+        this.titulodolivroingles = value;
+    }
+
+    /**
+     * Obtém o valor da propriedade flagdivulgacaocientifica.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getFLAGDIVULGACAOCIENTIFICA() {
+        if (flagdivulgacaocientifica == null) {
+            return "NAO";
+        } else {
+            return flagdivulgacaocientifica;
+        }
+    }
+
+    /**
+     * Define o valor da propriedade flagdivulgacaocientifica.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setFLAGDIVULGACAOCIENTIFICA(String value) {
+        this.flagdivulgacaocientifica = value;
+    }
+
+}
