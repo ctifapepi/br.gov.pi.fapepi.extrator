@@ -1,1 +1,5 @@
 /target/
+/docs/*.xml
+/docs/*.csv
+/docs/*.zip
+/docs/temp/*.xml
