@@ -5,7 +5,7 @@ import java.io.IOException;
 import javax.inject.Inject;
 import javax.inject.Named;
 
-import br.gov.pi.fapepi.extrator.model.CURRICULOVITAE;
+import br.gov.pi.fapepi.extrator.model.cv.CURRICULOVITAE;
 import br.gov.pi.fapepi.extrator.util.GetCurriculoCompactado;
 
 @Named

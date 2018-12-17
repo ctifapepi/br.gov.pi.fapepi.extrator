@@ -31,9 +31,15 @@ class ReadXmlTest {
 			@Test
 			void read() {
 
-		try {
-			builder = factory.newDocumentBuilder();
-			doc = builder.parse("src/main/webapp/docs/7233477221322177.xml");
+		
+			try {
+				builder = factory.newDocumentBuilder();
+				doc = builder.parse("src/main/webapp/docs/7233477221322177.xml");
+			} catch (ParserConfigurationException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
 			cvLattes = doc.getElementsByTagName("CURRICULO-VITAE");
 			node = cvLattes.item(0);
 
@@ -59,18 +65,22 @@ class ReadXmlTest {
 			cvLattes = doc.getElementsByTagName("AREA-DO-CONHECIMENTO-1");
 			node = cvLattes.item(0);
 			el = (Element) node;
+			nomeGrandeAreaDoConhecimento = el.getAttribute("NOME-GRANDE-AREA-DO-CONHECIMENTO");
+			nomeDaAreaDoConhecimento = el.getAttribute("NOME-DA-AREA-DO-CONHECIMENTO"); 
+			nomeDaSubAreaDoConhecimento = el.getAttribute("NOME-DA-SUB-AREA-DO-CONHECIMENTO"); 
+			nomeDaEspecialidade = el.getAttribute("NOME-DA-ESPECIALIDADE");
 
 			saida();
-
-		} catch (SAXException | IOException | ParserConfigurationException e) {
-			e.printStackTrace();
-		}
 
 	}
 
 	public void saida() {
-		System.out.println("ID-LATTES: " + idLattes + " Data de Atualização: " + data + " Hora: " + hora);
+		System.out.println("ID-LATTES: " + idLattes + "\nData de Atualização: " + data + "\nHora: " + hora);
 		System.out.println("Nome: " + nome);
 		System.out.println("Bolsista: " + resumo);
+		System.out.println("Grande área do conhecimiento: " + nomeGrandeAreaDoConhecimento);
+		System.out.println("Nome da área do conhecimento: " + nomeDaAreaDoConhecimento);
+		System.out.println("Nome da Sub-área do conhecimento: " + nomeDaSubAreaDoConhecimento);
+		System.out.println("Nome da Especilidade: " + nomeDaEspecialidade);
 	}
 }
