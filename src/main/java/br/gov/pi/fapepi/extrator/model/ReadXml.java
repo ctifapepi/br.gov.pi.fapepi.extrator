@@ -1,36 +1,37 @@
-package br.gov.pi.fapepi.extrator;
+package br.gov.pi.fapepi.extrator.model;
 
 import java.io.IOException;
+import java.util.List;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 
-import org.junit.jupiter.api.Test;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
+public class ReadXml {
+	
+	private DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+	private DocumentBuilder builder;
+	private Document doc;
+	private NodeList cvLattes;
+	private Node node;
+	private Element el;
+	private String idLattes, data, hora, nome, resumo;
+	private String nomeGrandeAreaDoConhecimento;
+	private String nomeDaAreaDoConhecimento; 
+	private String nomeDaSubAreaDoConhecimento; 
+	private String nomeDaEspecialidade;
+	private CvLattes cv;
+	private List<CvLattes> cvList; 
 
-class ReadXmlTest {
-
-	DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
-	DocumentBuilder builder;
-	Document doc;
-	NodeList cvLattes;
-	Node node;
-	Element el;
-	String idLattes, data, hora, nome, resumo;
-	String nomeGrandeAreaDoConhecimento;
-	String nomeDaAreaDoConhecimento; 
-	String nomeDaSubAreaDoConhecimento; 
-	String nomeDaEspecialidade;
-
-	@Test
 	void read() throws ParserConfigurationException, SAXException, IOException {
-
+			
+			cv = new CvLattes();
 		
 			builder = factory.newDocumentBuilder();
 
@@ -67,17 +68,28 @@ class ReadXmlTest {
 		nomeDaSubAreaDoConhecimento = el.getAttribute("NOME-DA-SUB-AREA-DO-CONHECIMENTO"); 
 		nomeDaEspecialidade = el.getAttribute("NOME-DA-ESPECIALIDADE");
 
+		
+		cv.setIdLattes(idLattes);
+		cv.setHora(hora);
+		cv.setData(data);
+		cv.setNome(nome);
+		cv.setResumo(resumo);
+		cv.setNomeGrandeAreaDoConhecimento(nomeGrandeAreaDoConhecimento);
+		cv.setNomeDaAreaDoConhecimento(nomeDaAreaDoConhecimento);
+		cv.setNomeDaSubareaDoConhecimento(nomeDaSubAreaDoConhecimento);
+		cv.setNomeDaEspecialidade(nomeDaEspecialidade);
+		
 		saida();
 
 	}
 
 	public void saida() {
-		System.out.println("ID-LATTES: " + idLattes + "\nData de Atualização: " + data + "\nHora: " + hora);
-		System.out.println("Nome: " + nome);
-		System.out.println("Bolsista: " + resumo);
-		System.out.println("Grande área do conhecimiento: " + nomeGrandeAreaDoConhecimento);
-		System.out.println("Nome da área do conhecimento: " + nomeDaAreaDoConhecimento);
-		System.out.println("Nome da Sub-área do conhecimento: " + nomeDaSubAreaDoConhecimento);
-		System.out.println("Nome da Especilidade: " + nomeDaEspecialidade);
+		System.out.println("ID-LATTES: " + cv.getIdLattes() + "\nData de Atualização: " + cv.getData() + "\nHora: " + cv.getHora());
+		System.out.println("Nome: " + cv.getNome());
+		System.out.println("Bolsista: " + cv.getResumo());
+		System.out.println("Grande área do conhecimiento: " + cv.getNomeGrandeAreaDoConhecimento());
+		System.out.println("Nome da área do conhecimento: " + cv.getNomeDaAreaDoConhecimento());
+		System.out.println("Nome da Sub-área do conhecimento: " + cv.getNomeDaSubareaDoConhecimento());
+		System.out.println("Nome da Especilidade: " + cv.getNomeDaEspecialidade());
 	}
 }
